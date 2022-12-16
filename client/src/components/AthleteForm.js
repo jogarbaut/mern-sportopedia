@@ -27,7 +27,7 @@ const AthleteForm = () => {
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [team, setTeam] = useState("");
+  const [team, setTeam] = useState("7U");
   const [jerseyNumber, setJerseyNumber] = useState("");
 
   const [error, setError] = useState(null);
