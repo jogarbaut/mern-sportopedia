@@ -30,10 +30,10 @@ function App() {
               path="/login"
               element={!user ? <Login /> : <Navigate to="/" />}
             />
-            <Route
+            {/* <Route
               path="/signup"
               element={!user ? <Signup /> : <Navigate to="/" />}
-            />
+            /> */}
           </Routes>
         </div>
         <Footer />
