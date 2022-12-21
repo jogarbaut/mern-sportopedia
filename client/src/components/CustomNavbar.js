@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 // Images
 import brandIcon from "../assets/images/brand-icon.png";
 import Button from "react-bootstrap/Button";
+import InstructionsModal from "./InstructionsModal";
 
 const CustomNavbar = () => {
   const { logout } = useLogout();
@@ -45,6 +46,7 @@ const CustomNavbar = () => {
               >
                 Log Out
               </Button>
+              <InstructionsModal />
             </Navbar.Collapse>
           ) : (
             <>
@@ -59,6 +61,7 @@ const CustomNavbar = () => {
                   Sign Up
                 </Button>
               </Nav.Link> */}
+                        <InstructionsModal />
               </Navbar.Collapse>
             </>
           )}
