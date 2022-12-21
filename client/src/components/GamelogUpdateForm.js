@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
 import { useAthleteContext } from "../hooks/useAthleteContext";
 import { useAuthContext } from "../hooks/useAuthContext";
 
@@ -13,14 +12,12 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import InputGroup from "react-bootstrap/InputGroup";
 
 const GamelogUpdateForm = ({ athleteId, game }) => {
   // Funcationality for modal
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const { dispatch } = useAthleteContext();
   const { user } = useAuthContext();
 
@@ -194,7 +191,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                   type="text"
                   onChange={(e) => setOpponent(e.target.value)}
                   value={opponent}
-                  placeholder="Enter Opponent"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formTeamScore">
@@ -206,7 +202,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     setResult(determineResult(e.target.value, opponentScore));
                   }}
                   value={score}
-                  placeholder="Enter Team Score"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formOpponentScore">
@@ -218,7 +213,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     setResult(determineResult(score, e.target.value));
                   }}
                   value={opponentScore}
-                  placeholder="Enter Opp Score"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formResult">
@@ -240,7 +234,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     }
                   }}
                   value={fieldGoalsMade}
-                  placeholder="Enter 2PM"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formFieldGoalsAttempted">
@@ -254,7 +247,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     );
                   }}
                   value={fieldGoalsAttempted}
-                  placeholder="Enter 2FGA"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formFieldGoalsPercentage">
@@ -282,7 +274,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     }
                   }}
                   value={threePointFieldGoalsMade}
-                  placeholder="Enter 3PM"
                 />
               </Form.Group>
               <Form.Group
@@ -299,7 +290,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     );
                   }}
                   value={threePointFieldGoalsAttempted}
-                  placeholder="Enter 3FGA"
                 />
               </Form.Group>
               <Form.Group
@@ -327,7 +317,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     }
                   }}
                   value={freethrowsMade}
-                  placeholder="Enter FTM"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formFreethrowsAttempted">
@@ -341,7 +330,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                     );
                   }}
                   value={freethrowsAttempted}
-                  placeholder="Enter FTA"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formFreethrowsPercentage">
@@ -368,7 +356,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                   type="number"
                   onChange={(e) => setRebounds(e.target.value)}
                   value={rebounds}
-                  placeholder="Enter REB"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formAssists">
@@ -377,7 +364,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                   type="number"
                   onChange={(e) => setAssists(e.target.value)}
                   value={assists}
-                  placeholder="Enter AST"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formBlocks">
@@ -386,7 +372,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                   type="number"
                   onChange={(e) => setBlocks(e.target.value)}
                   value={blocks}
-                  placeholder="Enter BLK"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formSteals">
@@ -395,7 +380,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                   type="number"
                   onChange={(e) => setSteals(e.target.value)}
                   value={steals}
-                  placeholder="Enter STL"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formSteals">
@@ -404,7 +388,6 @@ const GamelogUpdateForm = ({ athleteId, game }) => {
                   type="number"
                   onChange={(e) => setTurnovers(e.target.value)}
                   value={turnovers}
-                  placeholder="Enter TOV"
                 />
               </Form.Group>
             </Row>

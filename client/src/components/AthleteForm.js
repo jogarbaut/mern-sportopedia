@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
 import { useAthleteContext } from "../hooks/useAthleteContext";
 import { useAuthContext } from "../hooks/useAuthContext";
 
@@ -12,7 +11,6 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import InputGroup from "react-bootstrap/InputGroup";
 
 const AthleteForm = () => {
   // Funcationality for modal
@@ -31,7 +29,6 @@ const AthleteForm = () => {
   const [jerseyNumber, setJerseyNumber] = useState("");
 
   const [error, setError] = useState(null);
-  const [emptyFields, setEmptyFields] = useState([]);
 
   const clearForm = () => {
     setFirstName("");

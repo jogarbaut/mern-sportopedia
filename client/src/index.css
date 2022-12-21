@@ -227,6 +227,33 @@ span.athlete-list-btn {
   cursor: pointer;
 }
 
+/* Line Chart */
+.line-chart-container {
+  max-width: 100px;
+}
+
+.chart-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+.chart-subtitle {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  margin-left: 20px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.line-chart {
+  width: 75%;
+  height: 75%;
+}
+
 /* Footer */
 .footer {
   position: fixed;
@@ -239,7 +266,6 @@ span.athlete-list-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 hr.solid {

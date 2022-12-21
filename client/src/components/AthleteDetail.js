@@ -45,7 +45,6 @@ const AthleteDetail = ({ athlete }) => {
 
   // Form errors
   const [error, setError] = useState(null);
-  const [emptyFields, setEmptyFields] = useState([]);
 
   // Functions to determine inputs
   const determineResult = (teamScore, oppScore) => {
@@ -205,7 +204,6 @@ const AthleteDetail = ({ athlete }) => {
                             type="text"
                             onChange={(e) => setOpponent(e.target.value)}
                             value={opponent}
-                            placeholder="Enter Opponent"
                           />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formTeamScore">
@@ -219,7 +217,6 @@ const AthleteDetail = ({ athlete }) => {
                               );
                             }}
                             value={score}
-                            placeholder="Enter Team Score"
                           />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formOpponentScore">
@@ -231,7 +228,6 @@ const AthleteDetail = ({ athlete }) => {
                               setResult(determineResult(score, e.target.value));
                             }}
                             value={opponentScore}
-                            placeholder="Enter Opp Score"
                           />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formResult">
@@ -261,7 +257,6 @@ const AthleteDetail = ({ athlete }) => {
                               }
                             }}
                             value={fieldGoalsMade}
-                            placeholder="Enter 2PM"
                           />
                         </Form.Group>
                         <Form.Group
@@ -278,7 +273,6 @@ const AthleteDetail = ({ athlete }) => {
                               );
                             }}
                             value={fieldGoalsAttempted}
-                            placeholder="Enter 2FGA"
                           />
                         </Form.Group>
                         <Form.Group
@@ -312,7 +306,6 @@ const AthleteDetail = ({ athlete }) => {
                               }
                             }}
                             value={threePointFieldGoalsMade}
-                            placeholder="Enter 3PM"
                           />
                         </Form.Group>
                         <Form.Group
@@ -332,7 +325,6 @@ const AthleteDetail = ({ athlete }) => {
                               );
                             }}
                             value={threePointFieldGoalsAttempted}
-                            placeholder="Enter 3FGA"
                           />
                         </Form.Group>
                         <Form.Group
@@ -363,7 +355,6 @@ const AthleteDetail = ({ athlete }) => {
                               }
                             }}
                             value={freethrowsMade}
-                            placeholder="Enter FTM"
                           />
                         </Form.Group>
                         <Form.Group
@@ -380,7 +371,6 @@ const AthleteDetail = ({ athlete }) => {
                               );
                             }}
                             value={freethrowsAttempted}
-                            placeholder="Enter FTA"
                           />
                         </Form.Group>
                         <Form.Group
@@ -415,7 +405,6 @@ const AthleteDetail = ({ athlete }) => {
                             type="number"
                             onChange={(e) => setRebounds(e.target.value)}
                             value={rebounds}
-                            placeholder="Enter REB"
                           />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formAssists">
@@ -424,7 +413,6 @@ const AthleteDetail = ({ athlete }) => {
                             type="number"
                             onChange={(e) => setAssists(e.target.value)}
                             value={assists}
-                            placeholder="Enter AST"
                           />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formBlocks">
@@ -433,7 +421,6 @@ const AthleteDetail = ({ athlete }) => {
                             type="number"
                             onChange={(e) => setBlocks(e.target.value)}
                             value={blocks}
-                            placeholder="Enter BLK"
                           />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formSteals">
@@ -442,7 +429,6 @@ const AthleteDetail = ({ athlete }) => {
                             type="number"
                             onChange={(e) => setSteals(e.target.value)}
                             value={steals}
-                            placeholder="Enter STL"
                           />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formSteals">
@@ -451,7 +437,6 @@ const AthleteDetail = ({ athlete }) => {
                             type="number"
                             onChange={(e) => setTurnovers(e.target.value)}
                             value={turnovers}
-                            placeholder="Enter TOV"
                           />
                         </Form.Group>
                       </Row>

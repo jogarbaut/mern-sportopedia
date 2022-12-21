@@ -179,7 +179,6 @@ const GamelogForm = ({ athlete, athleteId }) => {
                   type="text"
                   onChange={(e) => setOpponent(e.target.value)}
                   value={opponent}
-                  placeholder="Enter Opponent"
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formTeamScore">
