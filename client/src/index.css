@@ -271,3 +271,79 @@ span.athlete-list-btn {
 hr.solid {
   border-top: 3px solid var(--primary-gray);
 }
+
+/* Login */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50vh;
+}
+
+.login {
+  width: 420px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+}
+
+.login-content {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  color: black;
+  font-weight: 700;
+}
+
+.login-button {
+  text-align: center;
+  margin: auto;
+}
+
+/* Instructions Modal */
+.instructions-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.instructions-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.instructions-body {
+  font-weight: 300;
+}
+
+.instructions-body > .subsection {
+  font-weight: 500;
+  margin: 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 75%;
+}
+
+.credits {
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
