@@ -18,7 +18,7 @@ body {
 
 /* Banner */
 .banner {
-  padding: 1rem 0;
+  padding: 1em 0;
   margin: auto;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .custom-navbar .logout-btn {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .custom-navbar .login-btn {
@@ -67,7 +67,6 @@ body {
 /* Pages */
 .pages {
   max-width: 1400px;
-  min-width: 480px;
   margin: 0 auto;
   padding-bottom: 100px;
 }

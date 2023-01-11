@@ -36,9 +36,7 @@ const CustomNavbar = () => {
           </Navbar.Collapse>
           {user ? (
             <Navbar.Collapse className="justify-content-end">
-              <Navbar.Text className="user">
-                Signed In User: {user.email}
-              </Navbar.Text>
+              <div className="d-flex">
               <Button
                 className="logout-btn"
                 variant="danger"
@@ -47,21 +45,24 @@ const CustomNavbar = () => {
                 Log Out
               </Button>
               <InstructionsModal />
+              </div>
             </Navbar.Collapse>
           ) : (
             <>
-            <Navbar.Collapse className="justify-content-end">
-              <Nav.Link href="/login">
-                <Button className="login-btn" variant="light">
-                  Demo Login
-                </Button>
-              </Nav.Link>
-              {/* <Nav.Link href="/signup">
+              <Navbar.Collapse className="justify-content-end">
+                <div className="d-flex">
+                <Nav.Link href="/login">
+                  <Button className="login-btn" variant="light">
+                    Login
+                  </Button>
+                </Nav.Link>
+                {/* <Nav.Link href="/signup">
                 <Button className="signup-btn" variant="light">
                   Sign Up
                 </Button>
               </Nav.Link> */}
-                        <InstructionsModal />
+                <InstructionsModal />
+                </div>
               </Navbar.Collapse>
             </>
           )}

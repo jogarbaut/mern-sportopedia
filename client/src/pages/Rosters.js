@@ -44,13 +44,16 @@ const Rosters = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  // Set roster data based on selectedTeam
+  // Display initial roster, first athlete, and gamelog
   useEffect(() => {
     axios
       .get(`http://localhost:8000/api/${selectedTeam}`)
       .then((res) => {
-        // setAthlete("");
         setSelectedTeamRoster(res.data);
+        if (selectedTeamRoster.length > 0) {
+          setAthlete(selectedTeamRoster[0])
+          setGamelog(selectedTeamRoster[0].gamelog)
+        }
       })
       .catch((err) => console.log(err));
   }, [athletes, selectedTeam, dispatch]);
@@ -171,7 +174,6 @@ const Rosters = () => {
           </ButtonGroup>
         </Row>
       </Container>
-      <Divider />
       <Container>
         <Row>
           <Col lg={3}>
